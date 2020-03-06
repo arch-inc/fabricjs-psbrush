@@ -1,0 +1,11 @@
+
+# temporary files
+.rpt2_cache/
+
+# Visual Studio Code configurations
+.vscode/
+
+# source code
+lib/
+.editorconfig
+rollup.config.json
