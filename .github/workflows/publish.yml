@@ -17,6 +17,6 @@ jobs:
         registry-url: https://registry.npmjs.org/
         scope: '@arch-inc'
     - name: Publish package
-      run: npm ci --access public
+      run: npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
