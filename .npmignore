@@ -7,5 +7,6 @@
 
 # source code
 lib/
+.github/
 .editorconfig
-rollup.config.json
+rollup.config.js
