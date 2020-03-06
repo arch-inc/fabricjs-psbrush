@@ -2,7 +2,7 @@ name: npm-publish
 on:
   create:
     tags:
-      - v*
+      - 'v*'
 jobs:
   npm-publish:
     name: npm-publish
