@@ -22,9 +22,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      - run: npm run build-pages
-      - run: npm run export-pages
-      - name: Deploy
+      - name: Build pages
+        run: npm run build-pages
+      - name: Export pages
+        run: npm run export-pages
+      - name: Deploy pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
