@@ -26,7 +26,8 @@ export default [
     ],
     plugins: [
       typescript({
-        typescript: require("typescript")
+        typescript: require("typescript"),
+        tsconfig: "tsconfig.lib.json"
       }),
       terser({
         output: {

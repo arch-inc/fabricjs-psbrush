@@ -9,7 +9,11 @@
     "build": "rollup -c",
     "watch": "rollup -cw",
     "clean": "del-cli dist",
-    "prettify": "prettier --write ./**/*.{ts,tsx}"
+    "prettify": "prettier --write ./**/*.{ts,tsx}",
+    "dev-pages": "next",
+    "build-pages": "next build",
+    "start-pages": "next start",
+    "export-pages": "next export"
   },
   "repository": {
     "type": "git",
@@ -26,8 +30,12 @@
     "fabric": "^4.0.0-beta.7"
   },
   "devDependencies": {
+    "@types/react": "^16.9.23",
     "del-cli": "^3.0.0",
+    "next": "^9.2.2",
     "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "rollup": "^2.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.2.0",
