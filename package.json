@@ -20,7 +20,14 @@
     "type": "git",
     "url": "git+https://github.com/arch-inc/fabricjs-psbrush.git"
   },
-  "keywords": [],
+  "keywords": [
+    "canvas",
+    "graphic",
+    "graphics",
+    "SVG",
+    "node-canvas",
+    "fabric"
+  ],
   "author": "Jun Kato <i@junkato.jp>",
   "license": "MIT",
   "bugs": {
@@ -31,6 +38,7 @@
     "fabric": "^4.0.0-beta.7"
   },
   "devDependencies": {
+    "@types/fabric": "^3.6.2",
     "@types/react": "^16.9.23",
     "del-cli": "^3.0.0",
     "next": "^9.2.2",
@@ -38,6 +46,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "rollup": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.26.0",

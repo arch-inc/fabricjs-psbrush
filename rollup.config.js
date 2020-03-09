@@ -1,10 +1,12 @@
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
 const checkComments = function(_node, comment) {
   const { value, type } = comment;
-  return type === "comment2" && /@preserve|@license|@cc_on/i.test(value);
+  return type === "comment2" && /@preserve|@license/i.test(value);
 };
 
 export default [
@@ -14,11 +16,17 @@ export default [
       {
         file: pkg.main,
         format: "umd",
-        name: "psbrush"
+        name: "psbrush",
+        globals: {
+          fabric: "fabric"
+        }
       },
       {
         file: pkg.module,
-        format: "es"
+        format: "es",
+        globals: {
+          fabric: "fabric"
+        }
       }
     ],
     external: [
@@ -26,6 +34,8 @@ export default [
       ...Object.keys(pkg.peerDependencies || {})
     ],
     plugins: [
+      resolve(),
+      commonjs(),
       typescript({
         typescript: require("typescript"),
         tsconfig: "tsconfig.lib.json"
