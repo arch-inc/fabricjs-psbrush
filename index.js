@@ -1,7 +1,7 @@
 
-window.onload = () => {
+function initialize(el) {
   // Create a Fabric.js canvas
-  let canvas = new fabric.Canvas("c", {
+  let canvas = new fabric.Canvas(el, {
     isDrawingMode: true,
     enablePointerEvents: true
   });
@@ -11,4 +11,4 @@ window.onload = () => {
   brush.width = 10;
   brush.color = "#000";
   canvas.freeDrawingBrush = brush;
-};
+}
