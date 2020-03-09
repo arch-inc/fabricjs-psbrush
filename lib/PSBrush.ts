@@ -427,5 +427,5 @@ const PSBrush: new (
   }
 });
 
-(fabric as any).PSBrush = PSBrush;
+(fabricjs as any).PSBrush = PSBrush;
 export default PSBrush;

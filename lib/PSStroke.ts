@@ -450,5 +450,5 @@ PSStroke.fromObject = function(object: any, callback: Function): void {
   });
 };
 
-(fabric as any).PSStroke = PSStroke;
+(fabricjs as any).PSStroke = PSStroke;
 export default PSStroke;
