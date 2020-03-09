@@ -13,7 +13,8 @@ export default [
     output: [
       {
         file: pkg.main,
-        format: "cjs"
+        format: "umd",
+        name: "psbrush"
       },
       {
         file: pkg.module,
