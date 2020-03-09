@@ -5,12 +5,12 @@ const Index: NextPage = () => {
   return (<>
     <Head>
       <title key="title">fabricjs-psbrush | A lightweight pressure-sensitive brush implementation for Fabric.js</title>
-      <style>{`
-        canvas {
-          border: 1px solid #ccc;
-        }
-      `}</style>
     </Head>
+    <style jsx>{`
+      div :global(canvas) {
+        border: 1px solid #ccc;
+      }
+    `}</style>
     <p>We're working on documentations -- stay tuned!</p>
     <div dangerouslySetInnerHTML={{
       __html: "<canvas id=\"c\" width=\"720\" height=\"480\" />"
