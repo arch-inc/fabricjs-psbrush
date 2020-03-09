@@ -9,10 +9,8 @@
 lib/
 .github/
 .editorconfig
+tsconfig.json
 rollup.config.js
 
 # website
-pages/
-next-env.d.ts
-tsconfig.json
-tsconfig.lib.json
+docs/
