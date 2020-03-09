@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "allowUmdGlobalAccess": true
   },
-  "include": ["lib/**/*.ts"]
+  "include": ["./lib/**/*.ts"]
 }

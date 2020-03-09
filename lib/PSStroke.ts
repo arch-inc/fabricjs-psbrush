@@ -1,4 +1,5 @@
-import { fabric } from "fabric";
+/// <reference types="fabric" />
+
 import PSPoint from "./PSPoint";
 
 export interface PSStrokeIface extends fabric.Object {

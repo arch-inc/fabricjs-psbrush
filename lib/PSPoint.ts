@@ -1,4 +1,4 @@
-import { fabric } from "fabric";
+/// <reference types="fabric" />
 
 class PSPoint extends fabric.Point {
   type = "PSPoint";

@@ -1,4 +1,4 @@
-import { fabric } from "fabric";
+/// <reference types="fabric" />
 
 /*!
  * Copyright (c) 2017 Vladimir Agafonkin (rewrite by Jun Kato in TypeScript for PSBrush implementation)

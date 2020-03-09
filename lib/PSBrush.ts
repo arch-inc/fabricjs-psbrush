@@ -1,4 +1,5 @@
-import { fabric } from "fabric";
+/// <reference types="fabric" />
+
 import PSSimplify from "./PSSimplify";
 import {
   FabricEvent,
