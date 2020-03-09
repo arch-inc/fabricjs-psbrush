@@ -1,9 +1,23 @@
+import { useMemo, useRef, useEffect } from "react";
 import { NextPage } from "next";
 import Head from "next/head";
 
 const basePath = process.env.BASE_PATH.replace(/\/$/, "");
 
 const Index: NextPage = () => {
+
+  // create a canvas element that never gets reloaded
+  const ref = useRef<HTMLCanvasElement>();
+  const canvas = useMemo(() => <canvas ref={ref} width="720" height="480" />, []);
+
+  // call window.initialize defined in index.js
+  useEffect(() => {
+    if (!ref.current || typeof window ==="undefined") {
+      return;
+    }
+    window["initialize"](ref.current);
+  }, [ref.current]);
+
   return (<>
     <Head>
       <title key="title">fabricjs-psbrush | A lightweight pressure-sensitive brush implementation for Fabric.js</title>
@@ -27,12 +41,10 @@ const Index: NextPage = () => {
         text-align: center;
         overflow-x: hidden;
       }
-      div.canvas :global(canvas) {
-        border: 1px solid #eee;
-        background: #fff;
-      }
       div.canvas :global(.canvas-container) {
         margin: auto;
+        border: 1px solid #eee;
+        background: #fff;
       }
       footer {
         padding: 2em 0;
@@ -50,11 +62,7 @@ const Index: NextPage = () => {
         <p>We're working on documentations -- stay tuned!</p>
         <p>For now, please refer to <a href="https://arch-inc.github.io/fabricjs-psbrush/index.js">the code</a> to see the minimal working example of <code>PSBrush</code>.</p>
       </div>
-      <div className="canvas-wrapper">
-        <div className="canvas" dangerouslySetInnerHTML={{
-          __html: "<canvas id=\"c\" width=\"720\" height=\"480\" />"
-        }}></div>
-      </div>
+      <div className="canvas">{canvas}</div>
     </div>
     <footer>
       <div className="ui container">
