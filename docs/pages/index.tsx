@@ -17,7 +17,7 @@ const Index: NextPage = () => {
     }}></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@0.0.12/dist/index.js"></script>
-    <script src={`${process.env.BASE_PATH}index.js`}></script>
+    <script src={`${process.env.BASE_PATH}/index.js`}></script>
   </>);
 }
 
