@@ -1,6 +1,8 @@
 import { NextPage } from "next";
 import Head from "next/head";
 
+const basePath = process.env.BASE_PATH.replace(/\/$/, "");
+
 const Index: NextPage = () => {
   return (<>
     <Head>
@@ -16,15 +18,21 @@ const Index: NextPage = () => {
       }
       div.main.content {
         background: #fff;
-        padding: 2em 0 1em 0;
+        padding: 2em 0 0 0;
       }
       div.canvas {
-        margin: 0 auto;
-        padding: 1em 0;
+        background: #f5f5f5;
+        margin: 2em auto 0 auto;
+        padding: 2em 0;
         text-align: center;
+        overflow-x: hidden;
       }
       div.canvas :global(canvas) {
-        border: 1px solid #ccc;
+        border: 1px solid #eee;
+        background: #fff;
+      }
+      div.canvas :global(.canvas-container) {
+        margin: auto;
       }
       footer {
         padding: 2em 0;
@@ -40,10 +48,13 @@ const Index: NextPage = () => {
     <div className="main content">
       <div className="ui container">
         <p>We're working on documentations -- stay tuned!</p>
+        <p>For now, please refer to <a href="https://arch-inc.github.io/fabricjs-psbrush/index.js">the code</a> to see the minimal working example of <code>PSBrush</code>.</p>
       </div>
-      <div className="canvas" dangerouslySetInnerHTML={{
-        __html: "<canvas id=\"c\" width=\"720\" height=\"480\" />"
-      }}></div>
+      <div className="canvas-wrapper">
+        <div className="canvas" dangerouslySetInnerHTML={{
+          __html: "<canvas id=\"c\" width=\"720\" height=\"480\" />"
+        }}></div>
+      </div>
     </div>
     <footer>
       <div className="ui container">
@@ -59,7 +70,7 @@ const Index: NextPage = () => {
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@0.0.12/dist/index.js"></script>
-    <script src={`${process.env.BASE_PATH}/index.js`}></script>
+    <script src={`${basePath}/index.js`}></script>
   </>);
 }
 
