@@ -11,10 +11,10 @@
     "watch": "rollup -cw",
     "clean": "del-cli dist",
     "prettify": "prettier --write ./**/*.{ts,tsx}",
-    "dev-pages": "next",
-    "build-pages": "next build",
-    "start-pages": "next start",
-    "export-pages": "next export"
+    "dev-pages": "next ./docs",
+    "build-pages": "next build ./docs",
+    "start-pages": "next start ./docs",
+    "export-pages": "next export ./docs"
   },
   "repository": {
     "type": "git",
