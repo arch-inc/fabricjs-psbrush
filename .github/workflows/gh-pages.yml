@@ -25,6 +25,8 @@ jobs:
       - run: npm ci
       - name: Build pages
         run: npm run build-pages
+        env:
+          GITHUB_PAGES: true
       - name: Export pages
         run: npm run export-pages
       - name: Deploy pages
