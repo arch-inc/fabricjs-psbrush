@@ -1,3 +1,5 @@
+const basePath = process.env.GITHUB_PAGES ? "/fabricjs-psbrush" : "/";
 module.exports = {
-  assetPrefix: process.env.GITHUB_PAGES ? "/fabricjs-psbrush" : "/"
+  assetPrefix: basePath,
+  env: { BASE_PATH: basePath }
 }
