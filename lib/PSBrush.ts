@@ -1,4 +1,5 @@
 /// <reference types="fabric" />
+const fabricjs: typeof fabric = typeof fabric === "undefined" ? require("fabric").fabric : fabric; 
 
 import PSSimplify from "./PSSimplify";
 import {
@@ -33,13 +34,13 @@ export interface PSBrushIface extends fabric.BaseBrush {
 
 /**
  * PSBrush class
- * @class fabric.PSBrush
- * @extends fabric.BaseBrush
+ * @class fabricjs.PSBrush
+ * @extends fabricjs.BaseBrush
  */
 const PSBrush: new (
   canvas: fabric.StaticCanvas,
   options?: fabric.ICanvasOptions
-) => PSBrushIface = <any>fabric.util.createClass(fabric.BaseBrush, {
+) => PSBrushIface = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
   simplify: null,
   pressureCoeff: 100,
   simplifyTolerance: 0,
@@ -50,7 +51,7 @@ const PSBrush: new (
 
   /**
    * Constructor
-   * @param {fabric.Canvas} canvas
+   * @param {fabricjs.Canvas} canvas
    * @return {PSBrush} Instance of a pencil brush
    */
   initialize: function(canvas) {
@@ -155,7 +156,7 @@ const PSBrush: new (
 
   /**
    * @private
-   * @param {fabric.Point} point Point to be added to points array
+   * @param {fabricjs.Point} point Point to be added to points array
    */
   _addPoint: function(point) {
     if (
@@ -175,7 +176,7 @@ const PSBrush: new (
   _reset: function() {
     this._points.length = 0;
     this._setBrushStyles();
-    var color = new fabric.Color(this.color);
+    var color = new fabricjs.Color(this.color);
     this.needsFullRender = color.getAlpha() < 1;
     this._setShadow();
   },
@@ -357,7 +358,7 @@ const PSBrush: new (
       strokeDashArray: this.strokeDashArray
     });
 
-    var position = new fabric.Point(
+    var position = new fabricjs.Point(
       path.left + path.width / 2,
       path.top + path.height / 2
     );

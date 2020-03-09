@@ -1,4 +1,5 @@
 /// <reference types="fabric" />
+const fabricjs: typeof fabric = typeof fabric === "undefined" ? require("fabric").fabric : fabric; 
 
 import PSPoint from "./PSPoint";
 
@@ -7,25 +8,25 @@ export interface PSStrokeIface extends fabric.Object {
   strokePoints: PSPoint[];
 }
 
-const min = fabric.util.array.min as (
+const min = fabricjs.util.array.min as (
     arr: any[],
     byProperty?: string
   ) => number,
-  max = fabric.util.array.max as (arr: any[], byProperty?: string) => number,
-  extend = fabric.util.object.extend;
+  max = fabricjs.util.array.max as (arr: any[], byProperty?: string) => number,
+  extend = fabricjs.util.object.extend;
 
 /**
  * Pressure-sensitive stroke class
  * @class PSStroke
- * @extends fabric.Object
+ * @extends fabricjs.Object
  * @tutorial {@link http://fabricjs.com/fabric-intro-part-1#stroke_and_strokegroup}
  * @see {@link PSStroke#initialize} for constructor definition
  */
 const PSStroke: {
   new (paths: PSPoint[], options: any): PSStrokeIface;
   fromObject: (object: any, callback: Function) => void;
-} = <any>fabric.util.createClass(
-  fabric.Object,
+} = <any>fabricjs.util.createClass(
+  fabricjs.Object,
   /** @lends PSStroke.prototype */ {
     /**
      * Type of an object
@@ -53,14 +54,14 @@ const PSStroke: {
      */
     endTime: null,
 
-    cacheProperties: fabric.Object.prototype.cacheProperties.concat(
+    cacheProperties: fabricjs.Object.prototype.cacheProperties.concat(
       "strokePoints",
       "startTime",
       "endTime",
       "fillRule"
     ),
 
-    stateProperties: fabric.Object.prototype.stateProperties.concat(
+    stateProperties: fabricjs.Object.prototype.stateProperties.concat(
       "strokePoints",
       "startTime",
       "endTime"
@@ -334,7 +335,7 @@ const PSStroke: {
         this._done();
       };
       DummyCtx.prototype.quadraticCurveTo = function(ctlX: number, ctlY: number, x: number, y: number) {
-        this.bounds = fabric.util.getBoundsOfCurve(
+        this.bounds = fabricjs.util.getBoundsOfCurve(
           this.x,
           this.y,
           ctlX,
@@ -418,9 +419,9 @@ const PSStroke: {
  * @param {Function} [callback] Callback to invoke when an Stroke instance is created
  */
 PSStroke.fromObject = function(object: any, callback: Function): void {
-  // code from https://github.com/fabricjs/fabric.js/blob/f3317569ffbe9e34477bd7579213fac8376bdc12/src/shapes/object.class.js#L1925-L1941
-  // cloning object inside fabric.Object._fromObject loses method of PSPoint, it causes errors at initializing PSStroke.
-  (<any>fabric.util).enlivenPatterns([object.fill, object.stroke], function(
+  // code from https://github.com/fabricjs/fabricjs.js/blob/f3317569ffbe9e34477bd7579213fac8376bdc12/src/shapes/object.class.js#L1925-L1941
+  // cloning object inside fabricjs.Object._fromObject loses method of PSPoint, it causes errors at initializing PSStroke.
+  (<any>fabricjs.util).enlivenPatterns([object.fill, object.stroke], function(
     patterns: any
   ) {
     if (typeof patterns[0] !== "undefined") {
@@ -429,11 +430,11 @@ PSStroke.fromObject = function(object: any, callback: Function): void {
     if (typeof patterns[1] !== "undefined") {
       object.stroke = patterns[1];
     }
-    fabric.util.enlivenObjects(
+    fabricjs.util.enlivenObjects(
       [object.clipPath],
       function(enlivedProps: any) {
         object.clipPath = enlivedProps[0];
-        fabric.util.enlivenObjects(
+        fabricjs.util.enlivenObjects(
           object["strokePoints"],
           function(enlivendStrokePoints: PSPoint[]) {
             var instance = new PSStroke(enlivendStrokePoints, object);
