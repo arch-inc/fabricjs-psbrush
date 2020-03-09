@@ -1,4 +1,4 @@
+import PSBrush from "./PSBrush";
+import PSStroke from "./PSStroke";
 
-export function hello() {
-  console.log("hello world!");
-}
+export { PSBrush, PSStroke }
