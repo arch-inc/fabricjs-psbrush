@@ -1,6 +1,6 @@
 name: npm-publish
 on:
-  create:
+  push:
     tags:
       - 'v*'
 jobs:
