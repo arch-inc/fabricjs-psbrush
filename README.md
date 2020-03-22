@@ -7,7 +7,43 @@
 
 ### Usage
 
-https://arch-inc.github.io/fabricjs-psbrush/
+```html
+<canvas id="main" width="720" height="480"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/index.js"></script>
+<script>
+
+  // Create a Fabric.js canvas
+  let canvas = new fabric.Canvas(document.getElementById("main"), {
+    isDrawingMode: true,
+    enablePointerEvents: true
+  });
+
+  // Initialize a brush
+  let brush = new fabric.PSBrush(canvas);
+  brush.width = 10;
+  brush.color = "#000";
+  canvas.freeDrawingBrush = brush;
+
+</script>
+```
+
+If you use `Webpack` or other similar solutions, simply install the npm package and start using it.
+
+TypeScript definitions are available by default. (e.g., [PSBrush.d.ts](https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/PSBrush.d.ts))
+
+```sh
+npm i @arch-inc/fabricjs-psbrush
+```
+
+```javascript
+import { PSBrush } from "@arch-inc/fabricjs-psbrush"
+```
+
+For more information, please refer to the following websites:
+
+- npm package: https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush
+- Demo site: https://arch-inc.github.io/fabricjs-psbrush/
 
 ### Credits
 
