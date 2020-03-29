@@ -426,8 +426,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
  */
 const PSBrush: {
   new (
-    canvas: fabric.StaticCanvas,
-    options?: fabric.ICanvasOptions
+    canvas: fabric.StaticCanvas
   ): PSBrushIface;
 } = PSBrushImpl;
 
