@@ -7,6 +7,10 @@
 
 **fabricjs-psbrush** は Fabric.js  v3.x および v4.x 用の軽量な感圧ブラシの実装です。
 
+- npm package: https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush
+- API document: https://arch-inc.github.io/fabricjs-psbrush/api/globals.html
+- Demo site: https://arch-inc.github.io/fabricjs-psbrush/
+
 ### Usage / 使い方
 
 ```html
@@ -44,12 +48,19 @@ npm i @arch-inc/fabricjs-psbrush
 import { PSBrush } from "@arch-inc/fabricjs-psbrush"
 ```
 
-For more information, please refer to the following websites:
+### API Documentation / APIドキュメント
 
-以下のサイトも参考にしてみてください。
+All of the exported classes and interfaces are listed in [TypeDoc](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html).
 
-- npm package: https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush
-- Demo site: https://arch-inc.github.io/fabricjs-psbrush/
+For instance, `PSBrush` can be constructed by [`new PSBrush(canvas)`](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush) and its instance has [various properties](https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html) including `color`, `opacity`, `width`, `simplifyTolerance`, `pressureCoeff` etc. Use of these properties can be observed in [Griffith Sketch](https://gs.archinc.jp/), a web-based lightweight tool for sketching ideas.
+
+Please note that `PSBrush` and `PSStroke` classes are listed as variables and their fields are defined separately as `PSBrushIface` and `PSStrokeIface`. This is because Fabric.js requires all relevant classes to be defined through its `fabric.util.createClass` helper function.
+
+このモジュールが export しているすべてのクラスとインタフェースは [TypeDoc](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html) で閲覧できます。
+
+例えば `PSBrush` クラスは [`new PSBrush(canvas)`](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush) でインスタンス化でき、 [さまざまなプロパティ](https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html) （`color`, `opacity`, `width`, `simplifyTolerance`, `pressureCoeff` など）を持っています。これらのプロパティの実際の利用例は、アイデアスケッチ作成用のWebサービス [Griffith Sketch](https://gs.archinc.jp/) で確認できます。
+
+なお、 `PSBrush` と `PSStroke` は実際にはクラスですが変数 (Variables) としてリストアップされ、メンバー変数は `PSBrushIface` と `PSStrokeIface` という別のインタフェースで定義されています。これは Fabric.js 本体がクラス定義を `fabric.util.createClass` というヘルパー関数で行うように実装されているためです。
 
 ### Credits / 開発者
 
@@ -71,6 +82,11 @@ Twitter [@ArchResearchJp](https://twitter.com/ArchResearchJp) で連絡がつき
 
 - [Pressure support for styluses? #4885
 ](https://github.com/fabricjs/fabric.js/issues/4885)
+
+### Library in action / 利用例
+
+- [Demo site](https://arch-inc.github.io/fabricjs-psbrush/): GitHub Pages accompanied with this library
+- [Griffith Sketch](https://gs.archinc.jp/): a web-based lightweight tool for sketching ideas.
 
 ---
 Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
