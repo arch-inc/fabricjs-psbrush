@@ -14,7 +14,8 @@
     "dev-pages": "next ./docs",
     "build-pages": "next build ./docs",
     "start-pages": "next start ./docs",
-    "export-pages": "next export ./docs"
+    "export-pages": "next export ./docs",
+    "build-docs": "typedoc --mode library --excludeExternals --excludeNotExported --excludePrivate --excludeProtected --out ./docs/out/api ./lib/index.ts"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "rollup": "^2.0.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.26.0",
+    "typedoc": "^0.17.0-3",
     "typescript": "^3.8.3"
   }
 }
