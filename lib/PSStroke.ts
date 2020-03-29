@@ -15,17 +15,7 @@ const min = fabricjs.util.array.min as (
   max = fabricjs.util.array.max as (arr: any[], byProperty?: string) => number,
   extend = fabricjs.util.object.extend;
 
-/**
- * Pressure-sensitive stroke class
- * @class PSStroke
- * @extends fabricjs.Object
- * @tutorial {@link http://fabricjs.com/fabric-intro-part-1#stroke_and_strokegroup}
- * @see {@link PSStroke#initialize} for constructor definition
- */
-const PSStroke: {
-  new (paths: PSPoint[], options: any): PSStrokeIface;
-  fromObject: (object: any, callback: Function) => void;
-} = <any>fabricjs.util.createClass(
+const PSStrokeImpl = <any>fabricjs.util.createClass(
   fabricjs.Object,
   /** @lends PSStroke.prototype */ {
     /**
@@ -410,6 +400,16 @@ const PSStroke: {
     }
   }
 );
+
+/**
+ * Pressure-sensitive stroke class
+ * @class PSStroke
+ * @extends fabricjs.Object
+ */
+const PSStroke: {
+  new (paths: PSPoint[], options: any): PSStrokeIface;
+  fromObject: (object: any, callback: Function) => void;
+} = PSStrokeImpl;
 
 /**
  * Creates an instance of Stroke from an object

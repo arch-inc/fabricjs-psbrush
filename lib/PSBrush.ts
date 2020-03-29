@@ -32,15 +32,7 @@ export interface PSBrushIface extends fabric.BaseBrush {
   onMouseUp(ev?: FabricEvent): void;
 }
 
-/**
- * PSBrush class
- * @class fabricjs.PSBrush
- * @extends fabricjs.BaseBrush
- */
-const PSBrush: new (
-  canvas: fabric.StaticCanvas,
-  options?: fabric.ICanvasOptions
-) => PSBrushIface = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
+const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
   simplify: null,
   pressureCoeff: 100,
   simplifyTolerance: 0,
@@ -426,6 +418,18 @@ const PSBrush: new (
     this.canvas.fire("path:created", { path });
   }
 });
+
+/**
+ * PSBrush class
+ * @class fabricjs.PSBrush
+ * @extends fabricjs.BaseBrush
+ */
+const PSBrush: {
+  new (
+    canvas: fabric.StaticCanvas,
+    options?: fabric.ICanvasOptions
+  ): PSBrushIface;
+} = PSBrushImpl;
 
 (fabricjs as any).PSBrush = PSBrush;
 export default PSBrush;
