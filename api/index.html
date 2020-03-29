@@ -67,6 +67,11 @@
 				<a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush"><img src="https://img.shields.io/npm/v/@arch-inc/fabricjs-psbrush" alt="npm version"></a></p>
 				<p><strong>fabricjs-psbrush</strong> is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.</p>
 				<p><strong>fabricjs-psbrush</strong> は Fabric.js  v3.x および v4.x 用の軽量な感圧ブラシの実装です。</p>
+				<ul>
+					<li>npm package: <a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush">https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush</a></li>
+					<li>API document: <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">https://arch-inc.github.io/fabricjs-psbrush/api/globals.html</a></li>
+					<li>Demo site: <a href="https://arch-inc.github.io/fabricjs-psbrush/">https://arch-inc.github.io/fabricjs-psbrush/</a></li>
+				</ul>
 				<a href="#usage--使い方" id="usage--使い方" style="color: inherit; text-decoration: none;">
 					<h3>Usage / 使い方</h3>
 				</a>
@@ -93,12 +98,15 @@
 				<p><code>Webpack</code> 等を使っている場合は <code>npm install</code> でインストールできます。TypeScriptの型定義がついてきます。</p>
 				<pre><code class="language-sh">npm i @arch-inc/fabricjs-psbrush</code></pre>
 				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { PSBrush } <span class="hljs-keyword">from</span> <span class="hljs-string">"@arch-inc/fabricjs-psbrush"</span></code></pre>
-				<p>For more information, please refer to the following websites:</p>
-				<p>以下のサイトも参考にしてみてください。</p>
-				<ul>
-					<li>npm package: <a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush">https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush</a></li>
-					<li>Demo site: <a href="https://arch-inc.github.io/fabricjs-psbrush/">https://arch-inc.github.io/fabricjs-psbrush/</a></li>
-				</ul>
+				<a href="#api-documentation--apiドキュメント" id="api-documentation--apiドキュメント" style="color: inherit; text-decoration: none;">
+					<h3>API Documentation / APIドキュメント</h3>
+				</a>
+				<p>All of the exported classes and interfaces are listed in <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">TypeDoc</a>.</p>
+				<p>For instance, <code>PSBrush</code> can be constructed by <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush"><code>new PSBrush(canvas)</code></a> and its instance has <a href="https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html">various properties</a> including <code>color</code>, <code>opacity</code>, <code>width</code>, <code>simplifyTolerance</code>, <code>pressureCoeff</code> etc. Use of these properties can be observed in <a href="https://gs.archinc.jp/">Griffith Sketch</a>, a web-based lightweight tool for sketching ideas.</p>
+				<p>Please note that <code>PSBrush</code> and <code>PSStroke</code> classes are listed as variables and their fields are defined separately as <code>PSBrushIface</code> and <code>PSStrokeIface</code>. This is because Fabric.js requires all relevant classes to be defined through its <code>fabric.util.createClass</code> helper function.</p>
+				<p>このモジュールが export しているすべてのクラスとインタフェースは <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">TypeDoc</a> で閲覧できます。</p>
+				<p>例えば <code>PSBrush</code> クラスは <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush"><code>new PSBrush(canvas)</code></a> でインスタンス化でき、 <a href="https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html">さまざまなプロパティ</a> （<code>color</code>, <code>opacity</code>, <code>width</code>, <code>simplifyTolerance</code>, <code>pressureCoeff</code> など）を持っています。これらのプロパティの実際の利用例は、アイデアスケッチ作成用のWebサービス <a href="https://gs.archinc.jp/">Griffith Sketch</a> で確認できます。</p>
+				<p>なお、 <code>PSBrush</code> と <code>PSStroke</code> は実際にはクラスですが変数 (Variables) としてリストアップされ、メンバー変数は <code>PSBrushIface</code> と <code>PSStrokeIface</code> という別のインタフェースで定義されています。これは Fabric.js 本体がクラス定義を <code>fabric.util.createClass</code> というヘルパー関数で行うように実装されているためです。</p>
 				<a href="#credits--開発者" id="credits--開発者" style="color: inherit; text-decoration: none;">
 					<h3>Credits / 開発者</h3>
 				</a>
@@ -120,6 +128,13 @@
 				<ul>
 					<li><a href="https://github.com/fabricjs/fabric.js/issues/4885">Pressure support for styluses? #4885
 					</a></li>
+				</ul>
+				<a href="#library-in-action--利用例" id="library-in-action--利用例" style="color: inherit; text-decoration: none;">
+					<h3>Library in action / 利用例</h3>
+				</a>
+				<ul>
+					<li><a href="https://arch-inc.github.io/fabricjs-psbrush/">Demo site</a>: GitHub Pages accompanied with this library</li>
+					<li><a href="https://gs.archinc.jp/">Griffith Sketch</a>: a web-based lightweight tool for sketching ideas.</li>
 				</ul>
 				<hr>
 				<p>Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)</p>
