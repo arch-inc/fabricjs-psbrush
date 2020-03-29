@@ -1,5 +1,6 @@
 /// <reference types="fabric" />
-const fabricjs: typeof fabric = typeof fabric === "undefined" ? require("fabric").fabric : fabric; 
+const fabricjs: typeof fabric =
+  typeof fabric === "undefined" ? require("fabric").fabric : fabric;
 
 class PSPoint extends fabricjs.Point {
   type = "PSPoint";
@@ -16,8 +17,11 @@ class PSPoint extends fabricjs.Point {
     return new PSPoint(this.x, this.y, this.pressure);
   }
 }
-PSPoint["fromObject"] = function(object: { x: number, y: number, pressure: number }, callback: (point: PSPoint) => void) {
-  callback && callback(new PSPoint(object.x, object.y, object.pressure))
+PSPoint["fromObject"] = function(
+  object: { x: number; y: number; pressure: number },
+  callback: (point: PSPoint) => void
+) {
+  callback && callback(new PSPoint(object.x, object.y, object.pressure));
 };
 
 fabricjs["PSPoint"] = PSPoint;

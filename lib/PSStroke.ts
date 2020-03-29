@@ -1,5 +1,6 @@
 /// <reference types="fabric" />
-const fabricjs: typeof fabric = typeof fabric === "undefined" ? require("fabric").fabric : fabric; 
+const fabricjs: typeof fabric =
+  typeof fabric === "undefined" ? require("fabric").fabric : fabric;
 
 import PSPoint from "./PSPoint";
 
@@ -324,7 +325,12 @@ const PSStrokeImpl = <any>fabricjs.util.createClass(
         this.bounds = [];
         this._done();
       };
-      DummyCtx.prototype.quadraticCurveTo = function(ctlX: number, ctlY: number, x: number, y: number) {
+      DummyCtx.prototype.quadraticCurveTo = function(
+        ctlX: number,
+        ctlY: number,
+        x: number,
+        y: number
+      ) {
         this.bounds = fabricjs.util.getBoundsOfCurve(
           this.x,
           this.y,

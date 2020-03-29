@@ -1,5 +1,6 @@
 /// <reference types="fabric" />
-const fabricjs: typeof fabric = typeof fabric === "undefined" ? require("fabric").fabric : fabric; 
+const fabricjs: typeof fabric =
+  typeof fabric === "undefined" ? require("fabric").fabric : fabric;
 
 import PSSimplify from "./PSSimplify";
 import {
@@ -13,7 +14,7 @@ import PSPoint from "./PSPoint";
 
 /*!
  * Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
- * 
+ *
  * fabricjs-psbrush, a lightweight pressure-sensitive brush implementation for Fabric.js
  * @license MIT
  */
@@ -425,9 +426,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
  * @extends fabricjs.BaseBrush
  */
 const PSBrush: {
-  new (
-    canvas: fabric.StaticCanvas
-  ): PSBrushIface;
+  new (canvas: fabric.StaticCanvas): PSBrushIface;
 } = PSBrushImpl;
 
 (fabricjs as any).PSBrush = PSBrush;

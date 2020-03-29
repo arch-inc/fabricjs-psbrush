@@ -2,7 +2,7 @@
 
 /*!
  * Copyright (c) 2017 Vladimir Agafonkin (rewrite by Jun Kato in TypeScript for PSBrush implementation)
- * 
+ *
  * Simplify.js, a high-performance JS polyline simplification library
  * https://mourner.github.io/simplify-js/
  * @license BSD-2-Clause
