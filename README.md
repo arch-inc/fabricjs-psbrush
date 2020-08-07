@@ -1,6 +1,7 @@
 ### fabricjs-psbrush
 
-[![build](https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg)](https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish)
+[![build](https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg)](https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_shield)
+
 [![npm version](https://img.shields.io/npm/v/@arch-inc/fabricjs-psbrush)](https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush)
 
 **fabricjs-psbrush** is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.
@@ -90,3 +91,6 @@ Twitter [@ArchResearchJp](https://twitter.com/ArchResearchJp) で連絡がつき
 
 ---
 Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_large)
