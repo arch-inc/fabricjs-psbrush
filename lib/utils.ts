@@ -1,3 +1,6 @@
+import PSPoint from "./PSPoint";
+import { PSStrokeIface } from "./PSStroke";
+
 export type FabricPointerEvent = TouchEvent | MouseEvent | PointerEvent;
 
 export interface FabricEvent {
@@ -8,6 +11,18 @@ export interface FabricEvent {
 export interface FabricPointer {
   x: number;
   y: number;
+}
+
+export function isPSStroke(
+  object: fabric.Object | fabric.ICollection<any>
+): object is PSStrokeIface {
+  return object["type"] === "PSStroke";
+}
+
+export function isPSPoint(
+  object: any
+): object is PSPoint {
+  return object["type"] === "PSPoint";
 }
 
 export function getPressure(ev: FabricPointerEvent) {
