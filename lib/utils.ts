@@ -16,13 +16,13 @@ export interface FabricPointer {
 export function isPSStroke(
   object: fabric.Object | fabric.ICollection<any>
 ): object is PSStrokeIface {
-  return object["type"] === "PSStroke";
+  return object && object["type"] === "PSStroke";
 }
 
 export function isPSPoint(
   object: any
 ): object is PSPoint {
-  return object["type"] === "PSPoint";
+  return object && object["type"] === "PSPoint";
 }
 
 export function getPressure(ev: FabricPointerEvent) {
