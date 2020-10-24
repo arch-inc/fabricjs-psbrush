@@ -42,8 +42,8 @@
   "devDependencies": {
     "@types/fabric": "^3.6.2",
     "@types/react": "^16.9.23",
-    "del-cli": "^3.0.0",
-    "next": "^9.2.2",
+    "del-cli": "^3.0.1",
+    "next": "^9.5.5",
     "prettier": "^1.19.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
