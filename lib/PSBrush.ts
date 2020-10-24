@@ -1,4 +1,10 @@
 /// <reference types="fabric" />
+/*!
+ * Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
+ *
+ * fabricjs-psbrush, a lightweight pressure-sensitive brush implementation for Fabric.js
+ * @license MIT
+ */
 const fabricjs: typeof fabric =
   typeof fabric === "undefined" ? require("fabric").fabric : fabric;
 
@@ -11,13 +17,6 @@ import {
 } from "./utils";
 import PSStroke, { PSStrokeIface } from "./PSStroke";
 import PSPoint from "./PSPoint";
-
-/*!
- * Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
- *
- * fabricjs-psbrush, a lightweight pressure-sensitive brush implementation for Fabric.js
- * @license MIT
- */
 
 const minPressure = 0.0001;
 const magicPressure = 0.07999999821186066;
