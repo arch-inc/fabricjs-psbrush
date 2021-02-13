@@ -168,7 +168,6 @@ const PSStrokeImpl = <any>fabricjs.util.createClass(
         p1 = this.strokePoints[i];
         p2 = this.strokePoints[i + 1];
       
-        ctx.closePath();
         ctx.stroke();
       }
 
