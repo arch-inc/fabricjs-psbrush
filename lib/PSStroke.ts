@@ -144,6 +144,8 @@ const PSStrokeImpl = <any>fabricjs.util.createClass(
         p2.x += strokeWidth;
         mid.x = p1.x;
       }
+      
+      ctx.strokeStyle = this.stroke;
 
       for (i = 1, len = this.strokePoints.length; i < len; i++) {
         ctx.beginPath();
