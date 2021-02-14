@@ -1,8 +1,8 @@
 ### fabricjs-psbrush
 
-[![build](https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg)](https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish)[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_shield)
-
+[![build](https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg)](https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish)
 [![npm version](https://img.shields.io/npm/v/@arch-inc/fabricjs-psbrush)](https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_shield)
 
 **fabricjs-psbrush** is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.
 
@@ -67,7 +67,7 @@ Please note that `PSBrush` and `PSStroke` classes are listed as variables and th
 
 - [Jun Kato](https://junkato.jp), core algorithm developer
 - [Kenta Hara](https://twitter.com/mactkg), developer
-- [And all the other GitHub contributors in the original Fabric.js implementation](https://github.com/fabricjs/fabric.js/graphs/contributors)
+- See the full list of contributors [here](https://github.com/arch-inc/fabricjs-psbrush/graphs/contributors)
 
 ### Dependencies / 依存パッケージ
 
@@ -90,7 +90,4 @@ Twitter [@ArchResearchJp](https://twitter.com/ArchResearchJp) で連絡がつき
 - [Griffith Sketch](https://gs.archinc.jp/): a web-based lightweight tool for sketching ideas.
 
 ---
-Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
-
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_large)
+Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)

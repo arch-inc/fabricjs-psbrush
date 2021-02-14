@@ -2,7 +2,7 @@ name: github-pages
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   deploy:
     name: github-pages
@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
           registry-url: https://registry.npmjs.org/
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm ci --no-optional
       - name: Build pages
-        run: npm run build-pages
+        run: npm run build && npm run build-pages
         env:
           GITHUB_PAGES: true
       - name: Export pages

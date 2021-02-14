@@ -13,7 +13,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14.x'
     - name: Cache dependencies
       uses: actions/cache@v1
       with:
@@ -25,6 +25,8 @@ jobs:
     - name: Build package
       run: npm run build
     - name: Add .npmrc entry
-      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/gpr.npmrc
+      run: |
+        echo "@arch-inc:registry=https://npm.pkg.github.com" > ~/gpr.npmrc \
+        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/gpr.npmrc
     - name: Publish package
       run: npm --userconfig=~/gpr.npmrc publish
