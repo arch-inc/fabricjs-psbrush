@@ -2,6 +2,7 @@
 
 [![build](https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg)](https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish)
 [![npm version](https://img.shields.io/npm/v/@arch-inc/fabricjs-psbrush)](https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_shield)
 
 **fabricjs-psbrush** is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.
 
