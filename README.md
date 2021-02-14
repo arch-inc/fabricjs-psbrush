@@ -66,7 +66,7 @@ Please note that `PSBrush` and `PSStroke` classes are listed as variables and th
 
 - [Jun Kato](https://junkato.jp), core algorithm developer
 - [Kenta Hara](https://twitter.com/mactkg), developer
-- [And all the other GitHub contributors in the original Fabric.js implementation](https://github.com/fabricjs/fabric.js/graphs/contributors)
+- See the full list of contributors [here](https://github.com/arch-inc/fabricjs-psbrush/graphs/contributors)
 
 ### Dependencies / 依存パッケージ
 
@@ -89,4 +89,4 @@ Twitter [@ArchResearchJp](https://twitter.com/ArchResearchJp) で連絡がつき
 - [Griffith Sketch](https://gs.archinc.jp/): a web-based lightweight tool for sketching ideas.
 
 ---
-Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
+Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)
