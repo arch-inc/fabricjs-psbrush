@@ -144,6 +144,10 @@ const PSStrokeImpl = <any>fabricjs.util.createClass(
         p2.x += strokeWidth;
         mid.x = p1.x;
       }
+      
+      ctx.strokeStyle = this.stroke;
+			ctx.lineCap = this.strokeLineCap;
+			ctx.lineJoin = this.strokeLineJoin;
 
       for (i = 1, len = this.strokePoints.length; i < len; i++) {
         ctx.beginPath();
@@ -161,9 +165,10 @@ const PSStrokeImpl = <any>fabricjs.util.createClass(
           mid.x - multSignX * strokeWidth + l,
           mid.y - multSignY * strokeWidth + t
         );
-        ctx.stroke();
         p1 = this.strokePoints[i];
         p2 = this.strokePoints[i + 1];
+      
+        ctx.stroke();
       }
 
       // ctx.restore();
