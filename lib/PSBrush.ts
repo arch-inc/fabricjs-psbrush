@@ -170,7 +170,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
     this._setBrushStyles();
     var color = new fabricjs.Color(this.color);
     this.needsFullRender = color.getAlpha() < 1;
-    this._setShadow();
+    // this._setShadow();
   },
 
   /**
@@ -365,7 +365,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
     path.left = position.x;
     if (this.shadow) {
       this.shadow.affectStroke = true;
-      path.setShadow(this.shadow);
+      // path.setShadow(this.shadow);
     }
 
     return path;
@@ -411,7 +411,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
     this.canvas.add(path);
     // this.canvas.renderAll();
     path.setCoords();
-    this._resetShadow();
+    // this._resetShadow();
     // this.canvas.clearContext(this.canvas.contextTop);
 
     // fire event 'path' created
