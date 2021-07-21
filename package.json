@@ -1,5 +1,5 @@
 {
-  "name": "@arch-inc/fabricjs-psbrush",
+  "name": "fabricjs-psbrush",
   "version": "0.0.17",
   "description": "A lightweight pressure-sensitive brush implementation for Fabric.js",
   "main": "dist/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arch-inc/fabricjs-psbrush.git"
+    "url": "git+https://github.com/moxionio/fabricjs-psbrush.git"
   },
   "keywords": [
     "canvas",
@@ -37,10 +37,10 @@
   },
   "homepage": "https://github.com/arch-inc/fabricjs-psbrush#readme",
   "dependencies": {
-    "fabric": "^4.3.1"
+    "fabric": "^4.5.1"
   },
   "devDependencies": {
-    "@types/fabric": "^3.6.2",
+    "@types/fabric": "^4.5.1",
     "@types/react": "^17.0.2",
     "del-cli": "^3.0.1",
     "next": "^10.0.6",

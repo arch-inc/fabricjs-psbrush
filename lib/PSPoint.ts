@@ -1,4 +1,6 @@
 /// <reference types="fabric" />
+import {fabric} from "fabric";
+
 const fabricjs: typeof fabric =
   typeof fabric === "undefined" ? require("fabric").fabric : fabric;
 
