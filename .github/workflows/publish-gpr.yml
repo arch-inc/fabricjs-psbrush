@@ -23,7 +23,7 @@ jobs:
           ${{ runner.os }}-node-
     - run: npm ci
     - name: Build package
-      run: npm run build
+      run: npm run build:lib
     - name: Add .npmrc entry
       run: |
         echo "registry=https://npm.pkg.github.com/" >> ~/gpr.npmrc
