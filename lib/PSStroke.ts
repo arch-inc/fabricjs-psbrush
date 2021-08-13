@@ -6,6 +6,8 @@ import PSPoint from "./PSPoint";
 
 export interface PSStrokeIface extends fabric.Object {
   type: "PSStroke";
+  startTime?: number;
+  endTime?: number;
   strokePoints: PSPoint[];
 }
 
@@ -418,14 +420,14 @@ const PSStrokeImpl = <any>fabricjs.util.createClass(
  * @extends fabricjs.Object
  */
 const PSStroke: {
-  new (paths: PSPoint[], options: any): PSStrokeIface;
+  new (path: PSPoint[], options: any): PSStrokeIface;
   fromObject: (object: any, callback: Function) => void;
 } = PSStrokeImpl;
 
 /**
- * Creates an instance of Stroke from an object
+ * Creates an instance of PSStroke from an object
  * @static
- * @memberOf Stroke
+ * @memberOf PSStroke
  * @param {Object} object
  * @param {Function} [callback] Callback to invoke when an Stroke instance is created
  */
