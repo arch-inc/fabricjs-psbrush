@@ -35,5 +35,8 @@ export function getPressure(ev: FabricPointerEvent) {
     return 0.5;
   }
   // PointerEvent (ev.pointerType: "pen" | "touch")
+  if (ev["pointerType"] === "touch" && (<PointerEvent>ev).pressure === 0) {
+    return 0.5;
+  }
   return (<PointerEvent>ev).pressure;
 }
