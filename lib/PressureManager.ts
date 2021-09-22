@@ -6,6 +6,9 @@ import PSPoint from "./PSPoint";
 import { getPressure, FabricPointerEvent } from "./utils";
 
 export interface PressureManagerIface {
+  min: number;
+  magic: number;
+  fallback: number;
   onMouseDown(ev: FabricPointerEvent): number;
   onMouseMove(ev: FabricPointerEvent, points: PSPoint[]): number;
   onMouseUp(): void;
