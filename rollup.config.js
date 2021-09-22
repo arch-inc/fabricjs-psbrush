@@ -1,5 +1,6 @@
 import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
+import copy from "rollup-plugin-copy";
 import pkg from "./package.json";
 
 const comments = function(_node, comment) {
@@ -40,6 +41,12 @@ export default [
         output: {
           comments
         }
+      }),
+      copy({
+        targets: [
+          { src: "dist/index.js", dest: "docs/public", rename: "lib.js" }
+        ],
+        hook: "writeBundle"
       })
     ]
   }
