@@ -19,9 +19,7 @@ export function isPSStroke(
   return object && object["type"] === "PSStroke";
 }
 
-export function isPSPoint(
-  object: any
-): object is PSPoint {
+export function isPSPoint(object: any): object is PSPoint {
   return object && object["type"] === "PSPoint";
 }
 

@@ -9,24 +9,19 @@ const fabricjs: typeof fabric =
   typeof fabric === "undefined" ? require("fabric").fabric : fabric;
 
 import PSSimplify from "./PSSimplify";
-import {
-  FabricEvent,
-  FabricPointer,
-  FabricPointerEvent,
-  getPressure
-} from "./utils";
+import { FabricEvent, FabricPointer, FabricPointerEvent } from "./utils";
+import PressureManager, { PressureManagerIface } from "./PressureManager";
 import PSStroke, { PSStrokeIface } from "./PSStroke";
 import PSPoint from "./PSPoint";
 
-const minPressure = 0.0001;
-const magicPressure = 0.07999999821186066;
-
 export interface PSBrushIface extends fabric.BaseBrush {
+  pressureManager: PressureManagerIface;
   pressureCoeff: number;
   simplifyTolerance: number;
   simplifyHighestQuality: boolean;
   pressureIgnoranceOnStart: number;
   opacity: number;
+  readonly currentStartTime: number;
   onMouseDown(pointer: FabricPointer | FabricEvent, ev: FabricEvent): void;
   onMouseMove(pointer: FabricPointer | FabricEvent, ev: FabricEvent): void;
   onMouseUp(ev?: FabricEvent): void;
@@ -34,6 +29,7 @@ export interface PSBrushIface extends fabric.BaseBrush {
 
 const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
   simplify: null,
+  pressureManager: null,
   pressureCoeff: 100,
   simplifyTolerance: 0,
   simplifyHighestQuality: false,
@@ -48,6 +44,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    */
   initialize: function(canvas) {
     this.simplify = new PSSimplify();
+    this.pressureManager = new PressureManager(this);
     this.canvas = canvas;
     this._points = [];
   },
@@ -124,6 +121,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
   onMouseUp: function(ev?: FabricEvent) {
     this.oldEnd = undefined;
     this._finalizeAndAddPath();
+    this.pressureManager.onMouseUp();
   },
 
   /**
@@ -132,11 +130,11 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    * @param {Object} ev
    */
   _prepareForDrawing: function(pointer: FabricPointer, ev: FabricPointerEvent) {
-    const pressure = getPressure(ev);
+    const pressure = this.pressureManager.onMouseDown(ev);
     const p = new PSPoint(
       pointer.x,
       pointer.y,
-      pressure === magicPressure ? minPressure : pressure
+      pressure
     );
 
     this._reset();
@@ -182,35 +180,8 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
     pointer: FabricPointer,
     ev: FabricPointerEvent
   ) {
-    const pressure = getPressure(ev),
-      pressureShouldBeIgnored =
-        this.pressureIgnoranceOnStart > Date.now() - this.currentStartTime,
-      hasPreviousPressureValues =
-        Array.isArray(this._points) && this._points.length > 0,
-      lastPressure = hasPreviousPressureValues
-        ? this._points[this._points.length - 1].pressure
-        : minPressure,
-      pointerPoint = new PSPoint(
-        pointer.x,
-        pointer.y,
-        pressureShouldBeIgnored
-          ? minPressure
-          : pressure === magicPressure
-          ? lastPressure
-          : Math.max(minPressure, pressure)
-      );
-    if (
-      !this.pressureShouldBeIgnored &&
-      hasPreviousPressureValues &&
-      lastPressure === minPressure &&
-      pointerPoint.pressure !== minPressure
-    ) {
-      this._points.forEach(
-        (p: PSPoint) =>
-          (p.pressure = Math.max(p.pressure, pointerPoint.pressure))
-      );
-      this._redrawSegments(this._points);
-    }
+    const pressure = this.pressureManager.onMouseMove(ev, this._points);
+    const pointerPoint = new PSPoint(pointer.x, pointer.y, pressure);
     return this._addPoint(pointerPoint);
   },
 
