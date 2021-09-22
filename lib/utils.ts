@@ -23,18 +23,18 @@ export function isPSPoint(object: any): object is PSPoint {
   return object && object["type"] === "PSPoint";
 }
 
-export function getPressure(ev: FabricPointerEvent) {
+export function getPressure(ev: FabricPointerEvent, fallbackValue: number = 0.5) {
   // TouchEvent
   if (ev["touches"] && ev["touches"].length > 0) {
     return (<TouchEvent>ev).touches[0].force;
   }
   // MouseEvent, PointerEvent (ev.pointerType: "mouse")
   if (ev["pointerType"] === "mouse" || typeof ev["pressure"] !== "number") {
-    return 0.5;
+    return fallbackValue;
   }
   // PointerEvent (ev.pointerType: "pen" | "touch")
   if (ev["pointerType"] === "touch" && (<PointerEvent>ev).pressure === 0) {
-    return 0.5;
+    return fallbackValue;
   }
   return (<PointerEvent>ev).pressure;
 }

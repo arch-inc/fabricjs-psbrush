@@ -11,38 +11,38 @@ export interface PressureManagerIface {
   onMouseUp(): void;
 }
 
-const minPressure = 0.0001;
-const magicPressure = 0.07999999821186066;
-
 class PressureManager implements PressureManagerIface {
+  public min = 0.0001;
+  public magic = 0.07999999821186066;
+  public fallback = 0.5;
   public constructor(private brush: PSBrushIface) {}
 
   onMouseDown(ev: FabricPointerEvent) {
-    const pressure = getPressure(ev);
-    return pressure === magicPressure ? minPressure : pressure;
+    const pressure = getPressure(ev, this.fallback);
+    return pressure === this.magic ? this.min : pressure;
   }
 
   onMouseMove(ev: FabricPointerEvent, points: PSPoint[]) {
-    const pressure = getPressure(ev),
+    const pressure = getPressure(ev, this.fallback),
       pressureShouldBeIgnored =
         this.brush.pressureIgnoranceOnStart >
         Date.now() - this.brush.currentStartTime,
       hasPreviousPressureValues = Array.isArray(points) && points.length > 0,
       lastPressure = hasPreviousPressureValues
         ? points[points.length - 1].pressure
-        : minPressure;
+        : this.min;
 
     const updatedPressure = pressureShouldBeIgnored
-      ? minPressure
-      : pressure === magicPressure
+      ? this.min
+      : pressure === this.magic
       ? lastPressure
-      : Math.max(minPressure, pressure);
+      : Math.max(this.min, pressure);
 
     if (
       !pressureShouldBeIgnored &&
       hasPreviousPressureValues &&
-      lastPressure === minPressure &&
-      updatedPressure !== minPressure
+      lastPressure === this.min &&
+      updatedPressure !== this.min
     ) {
       points.forEach(
         (p: PSPoint) => (p.pressure = Math.max(p.pressure, updatedPressure))
