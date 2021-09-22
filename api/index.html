@@ -89,10 +89,12 @@
 
   <span class="hljs-comment">// Initialize a brush</span>
   <span class="hljs-keyword">let</span> brush = <span class="hljs-keyword">new</span> fabric.PSBrush(canvas);
-  brush.width = <span class="hljs-number">10</span>;
-  brush.color = <span class="hljs-string">"#000"</span>;
   canvas.freeDrawingBrush = brush;
 
+  <span class="hljs-comment">// Set some options...</span>
+  brush.width = <span class="hljs-number">10</span>;
+  brush.color = <span class="hljs-string">"#000"</span>;
+  brush.pressureManager.fallback = <span class="hljs-number">0.3</span>; <span class="hljs-comment">// fallback value for mouse and touch events</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<p>If you use <code>Webpack</code> or other similar solutions, simply install the npm package and start using it.</p>
 				<p>TypeScript definitions are available by default. (e.g., <a href="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/PSBrush.d.ts">PSBrush.d.ts</a>)</p>
