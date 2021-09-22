@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FabricPointer | @arch-inc/fabricjs-psbrush</title>
+	<title>PressureManagerIface | @arch-inc/fabricjs-psbrush</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="fabricpointer.html">FabricPointer</a>
+					<a href="pressuremanageriface.html">PressureManagerIface</a>
 				</li>
 			</ul>
-			<h1>Interface FabricPointer</h1>
+			<h1>Interface PressureManagerIface</h1>
 		</div>
 	</div>
 </header>
@@ -66,8 +66,14 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FabricPointer</span>
+						<span class="target">PressureManagerIface</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/pressuremanager.html" class="tsd-signature-type">PressureManager</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -75,36 +81,83 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="fabricpointer.html#x" class="tsd-kind-icon">x</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="fabricpointer.html#y" class="tsd-kind-icon">y</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="pressuremanageriface.html#onmousedown" class="tsd-kind-icon">on<wbr>Mouse<wbr>Down</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="pressuremanageriface.html#onmousemove" class="tsd-kind-icon">on<wbr>Mouse<wbr>Move</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="pressuremanageriface.html#onmouseup" class="tsd-kind-icon">on<wbr>Mouse<wbr>Up</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="x" class="tsd-anchor"></a>
-					<h3>x</h3>
-					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/arch-inc/fabricjs-psbrush/blob/7f3e46c/lib/utils.ts#L12">lib/utils.ts:12</a></li>
-						</ul>
-					</aside>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onmousedown" class="tsd-anchor"></a>
+					<h3>on<wbr>Mouse<wbr>Down</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Mouse<wbr>Down<span class="tsd-signature-symbol">(</span>ev<span class="tsd-signature-symbol">: </span><a href="../globals.html#fabricpointerevent" class="tsd-signature-type">FabricPointerEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/arch-inc/fabricjs-psbrush/blob/7f3e46c/lib/PressureManager.ts#L9">lib/PressureManager.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ev: <a href="../globals.html#fabricpointerevent" class="tsd-signature-type">FabricPointerEvent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="y" class="tsd-anchor"></a>
-					<h3>y</h3>
-					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/arch-inc/fabricjs-psbrush/blob/7f3e46c/lib/utils.ts#L13">lib/utils.ts:13</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onmousemove" class="tsd-anchor"></a>
+					<h3>on<wbr>Mouse<wbr>Move</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Mouse<wbr>Move<span class="tsd-signature-symbol">(</span>ev<span class="tsd-signature-symbol">: </span><a href="../globals.html#fabricpointerevent" class="tsd-signature-type">FabricPointerEvent</a>, points<span class="tsd-signature-symbol">: </span><a href="../classes/pspoint.html" class="tsd-signature-type">PSPoint</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/arch-inc/fabricjs-psbrush/blob/7f3e46c/lib/PressureManager.ts#L10">lib/PressureManager.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ev: <a href="../globals.html#fabricpointerevent" class="tsd-signature-type">FabricPointerEvent</a></h5>
+								</li>
+								<li>
+									<h5>points: <a href="../classes/pspoint.html" class="tsd-signature-type">PSPoint</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="onmouseup" class="tsd-anchor"></a>
+					<h3>on<wbr>Mouse<wbr>Up</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Mouse<wbr>Up<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/arch-inc/fabricjs-psbrush/blob/7f3e46c/lib/PressureManager.ts#L11">lib/PressureManager.ts:11</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -130,30 +183,33 @@
 					<li class=" tsd-kind-interface">
 						<a href="fabricevent.html" class="tsd-kind-icon">Fabric<wbr>Event</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="fabricpointer.html" class="tsd-kind-icon">Fabric<wbr>Pointer</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="fabricpointer.html#x" class="tsd-kind-icon">x</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="fabricpointer.html#y" class="tsd-kind-icon">y</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="psbrushiface.html" class="tsd-kind-icon">PSBrush<wbr>Iface</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="psstrokeiface.html" class="tsd-kind-icon">PSStroke<wbr>Iface</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="pressuremanageriface.html" class="tsd-kind-icon">Pressure<wbr>Manager<wbr>Iface</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="pressuremanageriface.html#onmousedown" class="tsd-kind-icon">on<wbr>Mouse<wbr>Down</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="pressuremanageriface.html#onmousemove" class="tsd-kind-icon">on<wbr>Mouse<wbr>Move</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="pressuremanageriface.html#onmouseup" class="tsd-kind-icon">on<wbr>Mouse<wbr>Up</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#fabricpointerevent" class="tsd-kind-icon">Fabric<wbr>Pointer<wbr>Event</a>
 					</li>
