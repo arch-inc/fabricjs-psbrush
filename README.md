@@ -28,10 +28,12 @@
 
   // Initialize a brush
   let brush = new fabric.PSBrush(canvas);
-  brush.width = 10;
-  brush.color = "#000";
   canvas.freeDrawingBrush = brush;
 
+  // Set some options...
+  brush.width = 10;
+  brush.color = "#000";
+  brush.pressureManager.fallback = 0.3; // fallback value for mouse and touch events
 </script>
 ```
 
