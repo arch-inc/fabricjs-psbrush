@@ -14,7 +14,7 @@ export interface PressureManagerIface {
 class PressureManager implements PressureManagerIface {
   public min = 0.0001;
   public magic = 0.07999999821186066;
-  public fallback = 0.5;
+  public fallback = 0.1;
   public constructor(private brush: PSBrushIface) {}
 
   onMouseDown(ev: FabricPointerEvent) {
