@@ -1,6 +1,6 @@
 /// <reference types="fabric" />
 /*!
- * Copyright (c) 2020 Arch Inc. (Jun Kato, Kenta Hara)
+ * Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)
  *
  * fabricjs-psbrush, a lightweight pressure-sensitive brush implementation for Fabric.js
  * @license MIT
