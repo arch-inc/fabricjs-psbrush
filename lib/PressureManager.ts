@@ -14,11 +14,17 @@ export interface PressureManagerIface {
   onMouseUp(): void;
 }
 
+export interface PressureManagerConfig {
+    fallback: number;
+}
+
 class PressureManager implements PressureManagerIface {
   public min = 0.0001;
   public magic = 0.07999999821186066;
   public fallback = 0.1;
-  public constructor(private brush: PSBrushIface) {}
+  public constructor(private brush: PSBrushIface, config: PressureManagerConfig) {
+    this.fallback = config?.fallback ? config.fallback : this.fallback;
+  }
 
   onMouseDown(ev: FabricPointerEvent) {
     const pressure = getPressure(ev, this.fallback);

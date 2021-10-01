@@ -10,7 +10,7 @@ const fabricjs: typeof fabric =
 
 import PSSimplify from "./PSSimplify";
 import { FabricEvent, FabricPointer, FabricPointerEvent } from "./utils";
-import PressureManager, { PressureManagerIface } from "./PressureManager";
+import PressureManager, { PressureManagerConfig, PressureManagerIface } from "./PressureManager";
 import PSStroke, { PSStrokeIface } from "./PSStroke";
 import PSPoint from "./PSPoint";
 
@@ -42,9 +42,9 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    * @param {fabricjs.Canvas} canvas
    * @return {PSBrush} Instance of a pencil brush
    */
-  initialize: function(canvas) {
+  initialize: function(canvas, config) {
     this.simplify = new PSSimplify();
-    this.pressureManager = new PressureManager(this);
+    this.pressureManager = new PressureManager(this, config);
     this.canvas = canvas;
     this._points = [];
   },
@@ -396,7 +396,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
  * @extends fabricjs.BaseBrush
  */
 const PSBrush: {
-  new (canvas: fabric.StaticCanvas): PSBrushIface;
+  new (canvas: fabric.StaticCanvas, config?: PressureManagerConfig): PSBrushIface;
 } = PSBrushImpl;
 
 (fabricjs as any).PSBrush = PSBrush;
