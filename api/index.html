@@ -1,270 +1,73 @@
-<!doctype html>
-<html class="default no-js">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@arch-inc/fabricjs-psbrush</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-<header>
-	<div class="tsd-page-toolbar">
-		<div class="container">
-			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
-					<div class="field">
-						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
-					</div>
-					<ul class="results">
-						<li class="state loading">Preparing search index...</li>
-						<li class="state failure">The search index is not available</li>
-					</ul>
-					<a href="index.html" class="title">@arch-inc/fabricjs-psbrush</a>
-				</div>
-				<div class="table-cell" id="tsd-widgets">
-					<div id="tsd-filter">
-						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
-						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-						</div>
-					</div>
-					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tsd-page-title">
-		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
-			<h1>@arch-inc/fabricjs-psbrush</h1>
-		</div>
-	</div>
-</header>
-<div class="container container-main">
-	<div class="row">
-		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<a href="#fabricjs-psbrush" id="fabricjs-psbrush" style="color: inherit; text-decoration: none;">
-					<h3>fabricjs-psbrush</h3>
-				</a>
-				<p><a href="https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish"><img src="https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg" alt="build"></a>
-					<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=shield" alt="FOSSA Status"></a>
-				<a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush"><img src="https://img.shields.io/npm/v/@arch-inc/fabricjs-psbrush" alt="npm version"></a></p>
-				<p><strong>fabricjs-psbrush</strong> is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.</p>
-				<p><strong>fabricjs-psbrush</strong> は Fabric.js  v3.x および v4.x 用の軽量な感圧ブラシの実装です。</p>
-				<ul>
-					<li>npm package: <a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush">https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush</a></li>
-					<li>API document: <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">https://arch-inc.github.io/fabricjs-psbrush/api/globals.html</a></li>
-					<li>Demo site: <a href="https://arch-inc.github.io/fabricjs-psbrush/">https://arch-inc.github.io/fabricjs-psbrush/</a></li>
-				</ul>
-				<a href="#usage--使い方" id="usage--使い方" style="color: inherit; text-decoration: none;">
-					<h3>Usage / 使い方</h3>
-				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"720"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"480"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>@arch-inc/fabricjs-psbrush</title><meta name="description" content="Documentation for @arch-inc/fabricjs-psbrush"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@arch-inc/fabricjs-psbrush</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@arch-inc/fabricjs-psbrush</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#fabricjs-psbrush" id="fabricjs-psbrush" style="color: inherit; text-decoration: none;">
+  <h3>fabricjs-psbrush</h3>
+</a>
+<p><a href="https://github.com/arch-inc/fabricjs-psbrush/actions?query=workflow%3Anpm-publish"><img src="https://github.com/arch-inc/fabricjs-psbrush/workflows/npm-publish/badge.svg" alt="build"></a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Farch-inc%2Ffabricjs-psbrush.svg?type=shield" alt="FOSSA Status"></a>
+<a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush"><img src="https://img.shields.io/npm/v/@arch-inc/fabricjs-psbrush" alt="npm version"></a></p>
+<p><strong>fabricjs-psbrush</strong> is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.</p>
+<p><strong>fabricjs-psbrush</strong> は Fabric.js  v3.x および v4.x 用の軽量な感圧ブラシの実装です。</p>
+<ul>
+<li>npm package: <a href="https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush">https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush</a></li>
+<li>API document: <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">https://arch-inc.github.io/fabricjs-psbrush/api/globals.html</a></li>
+<li>Demo site: <a href="https://arch-inc.github.io/fabricjs-psbrush/">https://arch-inc.github.io/fabricjs-psbrush/</a></li>
+</ul>
 
-  <span class="hljs-comment">// Create a Fabric.js canvas</span>
-  <span class="hljs-keyword">let</span> canvas = <span class="hljs-keyword">new</span> fabric.Canvas(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"main"</span>), {
-    <span class="hljs-attr">isDrawingMode</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">enablePointerEvents</span>: <span class="hljs-literal">true</span>
-  });
+<a href="#usage--使い方" id="usage--使い方" style="color: inherit; text-decoration: none;">
+  <h3>Usage / 使い方</h3>
+</a>
+<pre><code class="language-html"><span class="hl-0">&lt;</span><span class="hl-1">canvas</span><span class="hl-2"> </span><span class="hl-3">id</span><span class="hl-2">=</span><span class="hl-4">&quot;main&quot;</span><span class="hl-2"> </span><span class="hl-3">width</span><span class="hl-2">=</span><span class="hl-4">&quot;720&quot;</span><span class="hl-2"> </span><span class="hl-3">height</span><span class="hl-2">=</span><span class="hl-4">&quot;480&quot;</span><span class="hl-0">&gt;&lt;/</span><span class="hl-1">canvas</span><span class="hl-0">&gt;</span><br/><span class="hl-0">&lt;</span><span class="hl-1">script</span><span class="hl-5"> </span><span class="hl-3">src</span><span class="hl-5">=</span><span class="hl-4">&quot;https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js&quot;</span><span class="hl-0">&gt;&lt;/</span><span class="hl-1">script</span><span class="hl-0">&gt;</span><br/><span class="hl-0">&lt;</span><span class="hl-1">script</span><span class="hl-5"> </span><span class="hl-3">src</span><span class="hl-5">=</span><span class="hl-4">&quot;https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/index.js&quot;</span><span class="hl-0">&gt;&lt;/</span><span class="hl-1">script</span><span class="hl-0">&gt;</span><br/><span class="hl-0">&lt;</span><span class="hl-1">script</span><span class="hl-0">&gt;</span><br/><br/><span class="hl-5">  </span><span class="hl-6">// Create a Fabric.js canvas</span><br/><span class="hl-5">  </span><span class="hl-7">let</span><span class="hl-5"> </span><span class="hl-8">canvas</span><span class="hl-5"> </span><span class="hl-2">=</span><span class="hl-5"> </span><span class="hl-7">new</span><span class="hl-5"> </span><span class="hl-8">fabric</span><span class="hl-5">.</span><span class="hl-9">Canvas</span><span class="hl-5">(</span><span class="hl-8">document</span><span class="hl-5">.</span><span class="hl-9">getElementById</span><span class="hl-5">(</span><span class="hl-10">&quot;main&quot;</span><span class="hl-5">), {</span><br/><span class="hl-5">    </span><span class="hl-8">isDrawingMode:</span><span class="hl-5"> </span><span class="hl-7">true</span><span class="hl-5">,</span><br/><span class="hl-5">    </span><span class="hl-8">enablePointerEvents:</span><span class="hl-5"> </span><span class="hl-7">true</span><br/><span class="hl-5">  });</span><br/><br/><span class="hl-5">  </span><span class="hl-6">// Initialize a brush</span><br/><span class="hl-5">  </span><span class="hl-7">let</span><span class="hl-5"> </span><span class="hl-8">brush</span><span class="hl-5"> </span><span class="hl-2">=</span><span class="hl-5"> </span><span class="hl-7">new</span><span class="hl-5"> </span><span class="hl-8">fabric</span><span class="hl-5">.</span><span class="hl-9">PSBrush</span><span class="hl-5">(</span><span class="hl-8">canvas</span><span class="hl-5">);</span><br/><span class="hl-5">  </span><span class="hl-8">canvas</span><span class="hl-5">.</span><span class="hl-8">freeDrawingBrush</span><span class="hl-5"> </span><span class="hl-2">=</span><span class="hl-5"> </span><span class="hl-8">brush</span><span class="hl-5">;</span><br/><br/><span class="hl-5">  </span><span class="hl-6">// Set some options...</span><br/><span class="hl-5">  </span><span class="hl-8">brush</span><span class="hl-5">.</span><span class="hl-8">width</span><span class="hl-5"> </span><span class="hl-2">=</span><span class="hl-5"> </span><span class="hl-11">10</span><span class="hl-5">;</span><br/><span class="hl-5">  </span><span class="hl-8">brush</span><span class="hl-5">.</span><span class="hl-8">color</span><span class="hl-5"> </span><span class="hl-2">=</span><span class="hl-5"> </span><span class="hl-10">&quot;#000&quot;</span><span class="hl-5">;</span><br/><span class="hl-5">  </span><span class="hl-8">brush</span><span class="hl-5">.</span><span class="hl-8">pressureManager</span><span class="hl-5">.</span><span class="hl-8">fallback</span><span class="hl-5"> </span><span class="hl-2">=</span><span class="hl-5"> </span><span class="hl-11">0.3</span><span class="hl-5">; </span><span class="hl-6">// fallback value for mouse and touch events</span><br/><span class="hl-0">&lt;/</span><span class="hl-1">script</span><span class="hl-0">&gt;</span>
+</code></pre>
+<p>If you use <code>Webpack</code> or other similar solutions, simply install the npm package and start using it.</p>
+<p>TypeScript definitions are available by default. (e.g., <a href="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/PSBrush.d.ts">PSBrush.d.ts</a>)</p>
+<p><code>Webpack</code> 等を使っている場合は <code>npm install</code> でインストールできます。TypeScriptの型定義がついてきます。</p>
+<pre><code class="language-sh"><span class="hl-2">npm i @arch-inc/fabricjs-psbrush</span>
+</code></pre>
+<pre><code class="language-javascript"><span class="hl-12">import</span><span class="hl-2"> { </span><span class="hl-8">PSBrush</span><span class="hl-2"> } </span><span class="hl-12">from</span><span class="hl-2"> </span><span class="hl-10">&quot;@arch-inc/fabricjs-psbrush&quot;</span>
+</code></pre>
 
-  <span class="hljs-comment">// Initialize a brush</span>
-  <span class="hljs-keyword">let</span> brush = <span class="hljs-keyword">new</span> fabric.PSBrush(canvas);
-  canvas.freeDrawingBrush = brush;
+<a href="#api-documentation--apiドキュメント" id="api-documentation--apiドキュメント" style="color: inherit; text-decoration: none;">
+  <h3>API Documentation / APIドキュメント</h3>
+</a>
+<p>All of the exported classes and interfaces are listed in <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">TypeDoc</a>.</p>
+<p>For instance, <code>PSBrush</code> can be constructed by <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush"><code>new PSBrush(canvas)</code></a> and its instance has <a href="https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html">various properties</a> including <code>color</code>, <code>opacity</code>, <code>width</code>, <code>simplifyTolerance</code>, <code>pressureCoeff</code> etc. Use of these properties can be observed in <a href="https://gs.archinc.jp/">Griffith Sketch</a>, a web-based lightweight tool for sketching ideas.</p>
+<p>Please note that <code>PSBrush</code> and <code>PSStroke</code> classes are listed as variables and their fields are defined separately as <code>PSBrushIface</code> and <code>PSStrokeIface</code>. This is because Fabric.js requires all relevant classes to be defined through its <code>fabric.util.createClass</code> helper function.</p>
+<p>このモジュールが export しているすべてのクラスとインタフェースは <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">TypeDoc</a> で閲覧できます。</p>
+<p>例えば <code>PSBrush</code> クラスは <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush"><code>new PSBrush(canvas)</code></a> でインスタンス化でき、 <a href="https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html">さまざまなプロパティ</a> （<code>color</code>, <code>opacity</code>, <code>width</code>, <code>simplifyTolerance</code>, <code>pressureCoeff</code> など）を持っています。これらのプロパティの実際の利用例は、アイデアスケッチ作成用のWebサービス <a href="https://gs.archinc.jp/">Griffith Sketch</a> で確認できます。</p>
+<p>なお、 <code>PSBrush</code> と <code>PSStroke</code> は実際にはクラスですが変数 (Variables) としてリストアップされ、メンバー変数は <code>PSBrushIface</code> と <code>PSStrokeIface</code> という別のインタフェースで定義されています。これは Fabric.js 本体がクラス定義を <code>fabric.util.createClass</code> というヘルパー関数で行うように実装されているためです。</p>
 
-  <span class="hljs-comment">// Set some options...</span>
-  brush.width = <span class="hljs-number">10</span>;
-  brush.color = <span class="hljs-string">"#000"</span>;
-  brush.pressureManager.fallback = <span class="hljs-number">0.3</span>; <span class="hljs-comment">// fallback value for mouse and touch events</span>
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<p>If you use <code>Webpack</code> or other similar solutions, simply install the npm package and start using it.</p>
-				<p>TypeScript definitions are available by default. (e.g., <a href="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/PSBrush.d.ts">PSBrush.d.ts</a>)</p>
-				<p><code>Webpack</code> 等を使っている場合は <code>npm install</code> でインストールできます。TypeScriptの型定義がついてきます。</p>
-				<pre><code class="language-sh">npm i @arch-inc/fabricjs-psbrush</code></pre>
-				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { PSBrush } <span class="hljs-keyword">from</span> <span class="hljs-string">"@arch-inc/fabricjs-psbrush"</span></code></pre>
-				<a href="#api-documentation--apiドキュメント" id="api-documentation--apiドキュメント" style="color: inherit; text-decoration: none;">
-					<h3>API Documentation / APIドキュメント</h3>
-				</a>
-				<p>All of the exported classes and interfaces are listed in <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">TypeDoc</a>.</p>
-				<p>For instance, <code>PSBrush</code> can be constructed by <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush"><code>new PSBrush(canvas)</code></a> and its instance has <a href="https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html">various properties</a> including <code>color</code>, <code>opacity</code>, <code>width</code>, <code>simplifyTolerance</code>, <code>pressureCoeff</code> etc. Use of these properties can be observed in <a href="https://gs.archinc.jp/">Griffith Sketch</a>, a web-based lightweight tool for sketching ideas.</p>
-				<p>Please note that <code>PSBrush</code> and <code>PSStroke</code> classes are listed as variables and their fields are defined separately as <code>PSBrushIface</code> and <code>PSStrokeIface</code>. This is because Fabric.js requires all relevant classes to be defined through its <code>fabric.util.createClass</code> helper function.</p>
-				<p>このモジュールが export しているすべてのクラスとインタフェースは <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html">TypeDoc</a> で閲覧できます。</p>
-				<p>例えば <code>PSBrush</code> クラスは <a href="https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush"><code>new PSBrush(canvas)</code></a> でインスタンス化でき、 <a href="https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html">さまざまなプロパティ</a> （<code>color</code>, <code>opacity</code>, <code>width</code>, <code>simplifyTolerance</code>, <code>pressureCoeff</code> など）を持っています。これらのプロパティの実際の利用例は、アイデアスケッチ作成用のWebサービス <a href="https://gs.archinc.jp/">Griffith Sketch</a> で確認できます。</p>
-				<p>なお、 <code>PSBrush</code> と <code>PSStroke</code> は実際にはクラスですが変数 (Variables) としてリストアップされ、メンバー変数は <code>PSBrushIface</code> と <code>PSStrokeIface</code> という別のインタフェースで定義されています。これは Fabric.js 本体がクラス定義を <code>fabric.util.createClass</code> というヘルパー関数で行うように実装されているためです。</p>
-				<a href="#credits--開発者" id="credits--開発者" style="color: inherit; text-decoration: none;">
-					<h3>Credits / 開発者</h3>
-				</a>
-				<ul>
-					<li><a href="https://junkato.jp">Jun Kato</a>, core algorithm developer</li>
-					<li><a href="https://twitter.com/mactkg">Kenta Hara</a>, developer</li>
-					<li>See the full list of contributors <a href="https://github.com/arch-inc/fabricjs-psbrush/graphs/contributors">here</a></li>
-				</ul>
-				<a href="#dependencies--依存パッケージ" id="dependencies--依存パッケージ" style="color: inherit; text-decoration: none;">
-					<h3>Dependencies / 依存パッケージ</h3>
-				</a>
-				<p>Except for the dependency for Fabric.js, this library contains a TypeScript port of <a href="https://mourner.github.io/simplify-js/">Simplify.js</a>, a high-performance JS polyline simplification library.</p>
-				<p>Fabric.js の他にパス単純化のためのライブラリ <a href="https://mourner.github.io/simplify-js/">Simplify.js</a> をTypeScriptで書き直して利用しています。</p>
-				<a href="#staying-in-touch--開発者に連絡" id="staying-in-touch--開発者に連絡" style="color: inherit; text-decoration: none;">
-					<h3>Staying in touch / 開発者に連絡</h3>
-				</a>
-				<p>We have developed this extension in collaboration with the core developers of Fabric.js and relevant information can be found in their issue tracker.</p>
-				<p>Twitter <a href="https://twitter.com/ArchResearchJp">@ArchResearchJp</a> で連絡がつきます。 Fabric.js 本家の issue でも活動しています。</p>
-				<ul>
-					<li><a href="https://github.com/fabricjs/fabric.js/issues/4885">Pressure support for styluses? #4885
-					</a></li>
-				</ul>
-				<a href="#library-in-action--利用例" id="library-in-action--利用例" style="color: inherit; text-decoration: none;">
-					<h3>Library in action / 利用例</h3>
-				</a>
-				<ul>
-					<li><a href="https://arch-inc.github.io/fabricjs-psbrush/">Demo site</a>: GitHub Pages accompanied with this library</li>
-					<li><a href="https://gs.archinc.jp/">Griffith Sketch</a>: a web-based lightweight tool for sketching ideas.</li>
-				</ul>
-				<hr>
-				<p>Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)</p>
-			</div>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="tsd-navigation secondary menu-sticky">
-				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="classes/pspoint.html" class="tsd-kind-icon">PSPoint</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/pressuremanager.html" class="tsd-kind-icon">Pressure<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/simplify.html" class="tsd-kind-icon">Simplify</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/fabricevent.html" class="tsd-kind-icon">Fabric<wbr>Event</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/fabricpointer.html" class="tsd-kind-icon">Fabric<wbr>Pointer</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/psbrushiface.html" class="tsd-kind-icon">PSBrush<wbr>Iface</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/psstrokeiface.html" class="tsd-kind-icon">PSStroke<wbr>Iface</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/pressuremanageriface.html" class="tsd-kind-icon">Pressure<wbr>Manager<wbr>Iface</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#fabricpointerevent" class="tsd-kind-icon">Fabric<wbr>Pointer<wbr>Event</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#psbrush" class="tsd-kind-icon">PSBrush</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#psstroke" class="tsd-kind-icon">PSStroke</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getpressure" class="tsd-kind-icon">get<wbr>Pressure</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#ispspoint" class="tsd-kind-icon">isPSPoint</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#ispsstroke" class="tsd-kind-icon">isPSStroke</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</div>
-<footer class="with-border-bottom">
-	<div class="container">
-		<h2>Legend</h2>
-		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-<div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
-</div>
-<div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
-</body>
-</html>
+<a href="#credits--開発者" id="credits--開発者" style="color: inherit; text-decoration: none;">
+  <h3>Credits / 開発者</h3>
+</a>
+<ul>
+<li><a href="https://junkato.jp">Jun Kato</a>, core algorithm developer</li>
+<li><a href="https://twitter.com/mactkg">Kenta Hara</a>, developer</li>
+<li>See the full list of contributors <a href="https://github.com/arch-inc/fabricjs-psbrush/graphs/contributors">here</a></li>
+</ul>
+
+<a href="#dependencies--依存パッケージ" id="dependencies--依存パッケージ" style="color: inherit; text-decoration: none;">
+  <h3>Dependencies / 依存パッケージ</h3>
+</a>
+<p>Except for the dependency for Fabric.js, this library contains a TypeScript port of <a href="https://mourner.github.io/simplify-js/">Simplify.js</a>, a high-performance JS polyline simplification library.</p>
+<p>Fabric.js の他にパス単純化のためのライブラリ <a href="https://mourner.github.io/simplify-js/">Simplify.js</a> をTypeScriptで書き直して利用しています。</p>
+
+<a href="#staying-in-touch--開発者に連絡" id="staying-in-touch--開発者に連絡" style="color: inherit; text-decoration: none;">
+  <h3>Staying in touch / 開発者に連絡</h3>
+</a>
+<p>We have developed this extension in collaboration with the core developers of Fabric.js and relevant information can be found in their issue tracker.</p>
+<p>Twitter <a href="https://twitter.com/ArchResearchJp">@ArchResearchJp</a> で連絡がつきます。 Fabric.js 本家の issue でも活動しています。</p>
+<ul>
+<li><a href="https://github.com/fabricjs/fabric.js/issues/4885">Pressure support for styluses? #4885
+</a></li>
+</ul>
+
+<a href="#library-in-action--利用例" id="library-in-action--利用例" style="color: inherit; text-decoration: none;">
+  <h3>Library in action / 利用例</h3>
+</a>
+<ul>
+<li><a href="https://arch-inc.github.io/fabricjs-psbrush/">Demo site</a>: GitHub Pages accompanied with this library</li>
+<li><a href="https://gs.archinc.jp/">Griffith Sketch</a>: a web-based lightweight tool for sketching ideas.</li>
+</ul>
+<hr>
+<p>Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)</p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/PSPoint.html" class="tsd-kind-icon">PSPoint</a></li><li class="tsd-kind-class"><a href="classes/PressureManager.html" class="tsd-kind-icon">Pressure<wbr/>Manager</a></li><li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/Simplify.html" class="tsd-kind-icon">Simplify</a></li><li class="tsd-kind-interface"><a href="interfaces/FabricEvent.html" class="tsd-kind-icon">Fabric<wbr/>Event</a></li><li class="tsd-kind-interface"><a href="interfaces/FabricPointer.html" class="tsd-kind-icon">Fabric<wbr/>Pointer</a></li><li class="tsd-kind-interface"><a href="interfaces/PSBrushIface.html" class="tsd-kind-icon">PSBrush<wbr/>Iface</a></li><li class="tsd-kind-interface"><a href="interfaces/PSStrokeIface.html" class="tsd-kind-icon">PSStroke<wbr/>Iface</a></li><li class="tsd-kind-interface"><a href="interfaces/PressureManagerIface.html" class="tsd-kind-icon">Pressure<wbr/>Manager<wbr/>Iface</a></li><li class="tsd-kind-type-alias"><a href="modules.html#FabricPointerEvent" class="tsd-kind-icon">Fabric<wbr/>Pointer<wbr/>Event</a></li><li class="tsd-kind-variable"><a href="modules.html#PSBrush" class="tsd-kind-icon">PSBrush</a></li><li class="tsd-kind-variable"><a href="modules.html#PSStroke" class="tsd-kind-icon">PSStroke</a></li><li class="tsd-kind-function"><a href="modules.html#getPressure" class="tsd-kind-icon">get<wbr/>Pressure</a></li><li class="tsd-kind-function"><a href="modules.html#isPSPoint" class="tsd-kind-icon">isPSPoint</a></li><li class="tsd-kind-function"><a href="modules.html#isPSStroke" class="tsd-kind-icon">isPSStroke</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li><li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
