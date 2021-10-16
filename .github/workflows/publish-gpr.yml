@@ -2,31 +2,31 @@ name: npm-publish-gpr
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 jobs:
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v1
-    - name: Set up Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - run: npm ci
-    - name: Build package
-      run: npm run build:lib
-    - name: Add .npmrc entry
-      run: |
-        echo "registry=https://npm.pkg.github.com/" >> ~/gpr.npmrc
-        echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/gpr.npmrc
-    - name: Publish package
-      run: npm --userconfig=~/gpr.npmrc publish
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+      - name: Build package
+        run: npm run build:lib
+      - name: Add .npmrc entry
+        run: |
+          echo "registry=https://npm.pkg.github.com/" >> ~/gpr.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/gpr.npmrc
+      - name: Publish package
+        run: npm --userconfig=~/gpr.npmrc publish
