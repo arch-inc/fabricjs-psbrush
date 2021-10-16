@@ -131,11 +131,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    */
   _prepareForDrawing: function(pointer: FabricPointer, ev: FabricPointerEvent) {
     const pressure = this.pressureManager.onMouseDown(ev);
-    const p = new PSPoint(
-      pointer.x,
-      pointer.y,
-      pressure
-    );
+    const p = new PSPoint(pointer.x, pointer.y, pressure);
 
     this._reset();
     this._addPoint(p);
