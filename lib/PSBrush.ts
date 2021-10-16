@@ -332,7 +332,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
     path.left = position.x;
     if (this.shadow) {
       this.shadow.affectStroke = true;
-      path.setShadow(this.shadow);
+      path.shadow = new fabric.Shadow(this.shadow);
     }
 
     return path;
