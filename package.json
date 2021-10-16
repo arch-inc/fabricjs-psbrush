@@ -21,7 +21,7 @@
     "next:export": "next export ./docs",
     "next:start": "next start ./docs",
     "prettify": "prettier --write ./**/*.{ts,tsx}",
-    "typedoc": "typedoc --mode library --excludeExternals --excludeNotExported --excludePrivate --excludeProtected --out ./docs/out/api ./lib/index.ts",
+    "typedoc": "typedoc --excludeInternal --excludeExternals --excludePrivate --excludeProtected --out ./docs/out/api ./lib/index.ts",
     "watch": "rollup -cw"
   },
   "repository": {
@@ -43,24 +43,24 @@
   },
   "homepage": "https://github.com/arch-inc/fabricjs-psbrush#readme",
   "dependencies": {
-    "fabric": "^4.3.1"
+    "fabric": "^4.6.0"
   },
   "devDependencies": {
-    "@types/fabric": "^3.6.2",
-    "@types/react": "^17.0.2",
+    "@types/fabric": "^4.5.3",
+    "@types/react": "^17.0.30",
     "cross-env": "^7.0.3",
     "del-cli": "^3.0.1",
-    "next": "^11.1.1",
+    "next": "^11.1.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "rollup": "^2.39.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.58.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "sharp": "^0.27.1",
-    "typedoc": "^0.17.0-3",
-    "typescript": "^4.1.5"
+    "typedoc": "^0.22.5",
+    "typescript": "^4.4.4"
   }
 }
