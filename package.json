@@ -12,7 +12,7 @@
     "build:docs": "run-s next typedoc",
     "build:lib": "cross-env NODE_ENV=production rollup -c",
     "clean": "run-p clean:*",
-    "clean:docs": "del-cli docs/out",
+    "clean:docs": "del-cli docs/.next docs/out",
     "clean:lib": "del-cli dist docs/public/lib.js",
     "dev": "run-p next:dev watch",
     "next": "run-s next:build next:export",
