@@ -1,6 +1,6 @@
 {
   "name": "@arch-inc/fabricjs-psbrush",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "A lightweight pressure-sensitive brush implementation for Fabric.js",
   "main": "dist/index.js",
   "browser": "dist/index.js",
