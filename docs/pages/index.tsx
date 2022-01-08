@@ -48,6 +48,10 @@ const Index: NextPage = () => {
           background: #f5f5f5;
           margin: 2em auto 0 auto;
           padding: 2em 0;
+          user-select: none;
+        }
+        div.canvas-wrapper * {
+          user-select: none;
         }
         div.canvas-wrapper > div.canvas {
           text-align: center;
