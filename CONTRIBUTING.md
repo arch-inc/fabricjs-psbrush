@@ -21,11 +21,12 @@ The following conventions are defined in [.editorconfig](https://github.com/arch
 - We use UTF-8 encoding
 - We indent using two spaces (soft tabs)
 
-We also use [Prettier](https://prettier.io/)  to format source code. The following command will apply Prettier to all of the TypeScript source code.
+We also use [Prettier](https://prettier.io/) to format source code. The following command will apply Prettier to all of the TypeScript source code.
 
 ```sh
 npm run prettify
 ```
 
 ---
-Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)
+
+Copyright (c) 2020-2022 Arch Inc. (Jun Kato, Kenta Hara)

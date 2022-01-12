@@ -6,7 +6,7 @@
 
 **fabricjs-psbrush** is a lightweight pressure-sensitive brush implementation for Fabric.js v3.x and v4.x.
 
-**fabricjs-psbrush** は Fabric.js  v3.x および v4.x 用の軽量な感圧ブラシの実装です。
+**fabricjs-psbrush** は Fabric.js v3.x および v4.x 用の軽量な感圧ブラシの実装です。
 
 - npm package: https://www.npmjs.com/package/@arch-inc/fabricjs-psbrush
 - API document: https://arch-inc.github.io/fabricjs-psbrush/api/globals.html
@@ -19,7 +19,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/index.js"></script>
 <script>
-
   // Create a Fabric.js canvas
   let canvas = new fabric.Canvas(document.getElementById("main"), {
     isDrawingMode: true,
@@ -41,17 +40,17 @@ If you use `Webpack` or other similar solutions, simply install the npm package 
 
 TypeScript definitions are available by default. (e.g., [PSBrush.d.ts](https://cdn.jsdelivr.net/npm/@arch-inc/fabricjs-psbrush@latest/dist/PSBrush.d.ts))
 
-`Webpack` 等を使っている場合は `npm install` でインストールできます。TypeScriptの型定義がついてきます。
+`Webpack` 等を使っている場合は `npm install` でインストールできます。TypeScript の型定義がついてきます。
 
 ```sh
 npm i @arch-inc/fabricjs-psbrush
 ```
 
 ```javascript
-import { PSBrush } from "@arch-inc/fabricjs-psbrush"
+import { PSBrush } from "@arch-inc/fabricjs-psbrush";
 ```
 
-### API Documentation / APIドキュメント
+### API Documentation / API ドキュメント
 
 All of the exported classes and interfaces are listed in [TypeDoc](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html).
 
@@ -61,7 +60,7 @@ Please note that `PSBrush` and `PSStroke` classes are listed as variables and th
 
 このモジュールが export しているすべてのクラスとインタフェースは [TypeDoc](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html) で閲覧できます。
 
-例えば `PSBrush` クラスは [`new PSBrush(canvas)`](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush) でインスタンス化でき、 [さまざまなプロパティ](https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html) （`color`, `opacity`, `width`, `simplifyTolerance`, `pressureCoeff` など）を持っています。これらのプロパティの実際の利用例は、アイデアスケッチ作成用のWebサービス [Griffith Sketch](https://gs.archinc.jp/) で確認できます。
+例えば `PSBrush` クラスは [`new PSBrush(canvas)`](https://arch-inc.github.io/fabricjs-psbrush/api/globals.html#psbrush) でインスタンス化でき、 [さまざまなプロパティ](https://arch-inc.github.io/fabricjs-psbrush/api/interfaces/psbrushiface.html) （`color`, `opacity`, `width`, `simplifyTolerance`, `pressureCoeff` など）を持っています。これらのプロパティの実際の利用例は、アイデアスケッチ作成用の Web サービス [Griffith Sketch](https://gs.archinc.jp/) で確認できます。
 
 なお、 `PSBrush` と `PSStroke` は実際にはクラスですが変数 (Variables) としてリストアップされ、メンバー変数は `PSBrushIface` と `PSStrokeIface` という別のインタフェースで定義されています。これは Fabric.js 本体がクラス定義を `fabric.util.createClass` というヘルパー関数で行うように実装されているためです。
 
@@ -75,7 +74,7 @@ Please note that `PSBrush` and `PSStroke` classes are listed as variables and th
 
 Except for the dependency for Fabric.js, this library contains a TypeScript port of [Simplify.js](https://mourner.github.io/simplify-js/), a high-performance JS polyline simplification library.
 
-Fabric.js の他にパス単純化のためのライブラリ [Simplify.js](https://mourner.github.io/simplify-js/) をTypeScriptで書き直して利用しています。
+Fabric.js の他にパス単純化のためのライブラリ [Simplify.js](https://mourner.github.io/simplify-js/) を TypeScript で書き直して利用しています。
 
 ### Staying in touch / 開発者に連絡
 
@@ -84,7 +83,7 @@ We have developed this extension in collaboration with the core developers of Fa
 Twitter [@ArchResearchJp](https://twitter.com/ArchResearchJp) で連絡がつきます。 Fabric.js 本家の issue でも活動しています。
 
 - [Pressure support for styluses? #4885
-](https://github.com/fabricjs/fabric.js/issues/4885)
+  ](https://github.com/fabricjs/fabric.js/issues/4885)
 
 ### Library in action / 利用例
 
@@ -92,4 +91,5 @@ Twitter [@ArchResearchJp](https://twitter.com/ArchResearchJp) で連絡がつき
 - [Griffith Sketch](https://gs.archinc.jp/): a web-based lightweight tool for sketching ideas.
 
 ---
-Copyright (c) 2020-2021 Arch Inc. (Jun Kato, Kenta Hara)
+
+Copyright (c) 2020-2022 Arch Inc. (Jun Kato, Kenta Hara)
