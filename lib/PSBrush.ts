@@ -21,6 +21,7 @@ export interface PSBrushIface extends fabric.BaseBrush {
   simplifyHighestQuality: boolean;
   pressureIgnoranceOnStart: number;
   opacity: number;
+  disableTouch: boolean;
   readonly currentStartTime: number;
   onMouseDown(pointer: FabricPointer | FabricEvent, ev: FabricEvent): void;
   onMouseMove(pointer: FabricPointer | FabricEvent, ev: FabricEvent): void;
@@ -35,6 +36,7 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
   simplifyHighestQuality: false,
   pressureIgnoranceOnStart: -1,
   opacity: 1,
+  disableTouch: false,
   currentStartTime: null,
 
   /**
@@ -67,7 +69,14 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    */
   onMouseDown: function(pointer: FabricPointer | FabricEvent, ev: FabricEvent) {
     const p = ev ? ev.pointer : pointer;
-    const e = ev ? ev.e : pointer["e"] || null;
+    const e: FabricPointerEvent = ev ? ev.e : pointer["e"] || null;
+    if (
+      this.disableTouch &&
+      e &&
+      ((e as TouchEvent).touches || (e as PointerEvent).pointerType === "touch")
+    ) {
+      return;
+    }
 
     this._prepareForDrawing(p, e);
     // capture coordinates immediately
@@ -84,6 +93,13 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
   onMouseMove: function(pointer: FabricPointer | FabricEvent, ev: FabricEvent) {
     const p = ev ? ev.pointer : pointer;
     const e = ev ? ev.e : pointer["e"] || null;
+    if (
+      this.disableTouch &&
+      e &&
+      ((e as TouchEvent).touches || (e as PointerEvent).pointerType === "touch")
+    ) {
+      return;
+    }
 
     if (this._captureDrawingPath(p, e) && this._points.length > 1) {
       if (this.needsFullRender) {
@@ -119,6 +135,15 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    * @param {Object} ev
    */
   onMouseUp: function(ev?: FabricEvent) {
+    const e = ev?.e || null;
+    if (
+      this.disableTouch &&
+      e &&
+      ((e as TouchEvent).touches || (e as PointerEvent).pointerType === "touch")
+    ) {
+      return;
+    }
+
     this.oldEnd = undefined;
     this._finalizeAndAddPath();
     this.pressureManager.onMouseUp();
