@@ -64,6 +64,7 @@ const Index: NextPage = () => {
         }
         footer {
           padding: 2em 0;
+          user-select: none;
         }
       `}</style>
       <div className="hero">

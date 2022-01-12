@@ -39,7 +39,7 @@ const Index: NextPage = () => {
     <>
       <Head>
         <title key="title">
-          fabricjs-psbrush | A lightweight pressure-sensitive brush
+          fabricjs-psbrush (use import) | A lightweight pressure-sensitive brush
           implementation for Fabric.js
         </title>
         <link
@@ -64,6 +64,9 @@ const Index: NextPage = () => {
           margin: 2em auto 0 auto;
           padding: 2em 0;
         }
+        div.canvas-wrapper * {
+          user-select: none;
+        }
         div.canvas-wrapper > div.canvas {
           text-align: center;
           overflow: hidden;
@@ -75,6 +78,7 @@ const Index: NextPage = () => {
         }
         footer {
           padding: 2em 0;
+          user-select: none;
         }
       `}</style>
       <div className="hero">
