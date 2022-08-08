@@ -42,8 +42,8 @@
     "url": "https://github.com/arch-inc/fabricjs-psbrush/issues"
   },
   "homepage": "https://github.com/arch-inc/fabricjs-psbrush#readme",
-  "dependencies": {
-    "fabric": "^4.6.0"
+  "peerDependencies": {
+    "fabric": "^4.6.0 || ^5.0.0"
   },
   "devDependencies": {
     "@types/fabric": "^4.5.3",
