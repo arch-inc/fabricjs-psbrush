@@ -185,8 +185,9 @@ const PSBrushImpl = <any>fabricjs.util.createClass(fabricjs.BaseBrush, {
    * @private
    */
   _reset: function() {
+    const ctx = this.canvas.contextTop;
     this._points.length = 0;
-    this._setBrushStyles();
+    this._setBrushStyles(ctx);
     var color = new fabricjs.Color(this.color);
     this.needsFullRender = color.getAlpha() < 1;
     this._setShadow();
