@@ -59,7 +59,6 @@
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "sharp": "^0.27.1",
     "typedoc": "^0.22.5",
     "typescript": "^4.4.4"
   }
